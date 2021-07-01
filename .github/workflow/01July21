@@ -1,15 +1,15 @@
 name: Shell Commands
 
-on:[push]
+on: [push]
 
-Jobs: 
- run-shell-Commands
-  runs-on:ubuntu-latest 
-  steps:
-   - name: echo a string
-    run:echo "welcome"
-   - name: multiline script
-    run:
-     node -v
-     npm -v
-     pip -V 
+jobs: 
+  run-shell-command:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: echo a string
+        run: echo "welcome"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
+          pip -V 
